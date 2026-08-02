@@ -55,3 +55,16 @@ class Identifier(Node):
 
     def __repr__(self):
         return f"Identifier({self.name})"
+class BinaryExpression(Node):
+
+    def __init__(self, left, operator, right):
+        self.left = left
+        self.operator = operator
+        self.right = right
+
+    def __repr__(self):
+        return (
+            f"Binary({self.left}, "
+            f"{self.operator}, "
+            f"{self.right})"
+        )
