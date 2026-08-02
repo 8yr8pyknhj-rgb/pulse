@@ -1,4 +1,5 @@
 from enum import Enum, auto
+from compiler.token import Token, TokenType
 
 class TokenType(Enum):
     SAY=auto(); IDENTIFIER=auto(); STRING=auto(); NUMBER=auto(); EQUALS=auto(); EOF=auto()
