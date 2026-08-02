@@ -3,7 +3,7 @@
 # Version 0.1
 # ==========================================
 
-from ast import (
+from compiler.ast import (
     Program,
     SayStatement,
     Assignment,
