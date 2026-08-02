@@ -12,7 +12,7 @@ from compiler.ast import (
     Identifier,
 )
 
-from lexer import TokenType
+from compiler.lexer import TokenType
 
 
 class Parser:
