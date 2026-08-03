@@ -11,11 +11,17 @@ class TokenType(Enum):
 
 
 class Token:
-    def __init__(self, token_type, value=None):
+    def __init__(self, token_type, value=None, line=1, column=1):
         self.type = token_type
         self.value = value
+        self.line = line
+        self.column = column
 
     def __repr__(self):
         if self.value is None:
-            return self.type.name
-        return f"{self.type.name}({self.value})"
+            return f"{self.type.name}@{self.line}:{self.column}"
+        return (
+            f"{self.type.name}"
+            f"({self.value})"
+            f"@{self.line}:{self.column}"
+        )
